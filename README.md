@@ -49,8 +49,9 @@ Some information you can find on
 
 Some links
 ----------
-[wagtail](https://wagtail.io/)
-[wagtail docs](http://docs.wagtail.io/en/v1.7/getting_started/tutorial.html)
+- [wagtail](https://wagtail.io/)
+- [wagtail docs](http://docs.wagtail.io/en/v1.7/getting_started/tutorial.html)
+
 
 
 
