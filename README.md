@@ -1,11 +1,11 @@
-##Wagtail CMS BLOG Sample 
+#Wagtail CMS BLOG Sample 
 
 
 Cooked Heroku deploy
 
 [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/dani4kor/wagtail-heroku)
 
-# USAGE
+## USAGE
 Deploy this guy, then git clone locally:
 
 ```
@@ -32,7 +32,7 @@ Example
 `$ heroku run python manage.py createsuperuser`
 
 - Create Blogindexpage -> complete the fields
-- Add Childpage Blog page for Blog page index -> complete the fields
+- Add Childpage Blog page for Blogpageindex -> complete the fields
 - Goto https://your-heroku-app-name.herokuapp.com/title-blog-page-index
 - Open bottle of Beer, cheers
 
