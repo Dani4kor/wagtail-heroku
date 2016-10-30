@@ -34,7 +34,9 @@ Example
 - Create Blogindexpage -> complete the fields
 - Add Childpage Blog page for Blogpageindex -> complete the fields
 - Goto https://your-heroku-app-name.herokuapp.com/title-blog-page-index
-- Open bottle of Beer, cheers
+- Configure redirects/sites in Settings
+- Open bottle of Beer, cheers 
+`[example](https://it4humans.herokuapp.com)`
 
 
 Notice
@@ -45,9 +47,10 @@ Some information you can find on
 * [heroku-django-cookbook](https://github.com/nigma/heroku-django-cookbook)
 * [watail heroku deploy](https://wagtail.io/blog/deploying-wagtail-heroku)
 
-
-
-http://docs.wagtail.io/en/v1.7/getting_started/tutorial.html
+Some links
+----------
+[wagtail](https://wagtail.io/)
+[wagtail docs](http://docs.wagtail.io/en/v1.7/getting_started/tutorial.html)
 
 
 
