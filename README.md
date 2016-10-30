@@ -36,7 +36,7 @@ Example
 - Goto https://your-heroku-app-name.herokuapp.com/title-blog-page-index
 - Configure redirects/sites in Settings
 - Open bottle of Beer, cheers 
-`[example](https://it4humans.herokuapp.com)`
+[example](https://it4humans.herokuapp.com)
 
 
 Notice
