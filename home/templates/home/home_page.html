@@ -1,0 +1,10 @@
+{% extends "base.html" %} {% load wagtailcore_tags wagtailimages_tags static wagtailuserbar %} {% block body_class %}template-homepage{% endblock %} {% block image %}
+<style type="text/css">
+</style>
+<header class="intro-header" style="background-image: url(&#39;{% static 'img/intro.jpg' %}&#39;)">
+    {% endblock %} {% wagtailuserbar %} {% block content %} {{ page.body|richtext }} {% endblock %} {% block pager %}
+    <ul class="pager text-center">
+        <li class="next"><a href="/blog">BLOG</a></li>.
+        <li class="next"><a href="https://en.lichess.org/@/OwnOwn">CHESS</a></li>
+    </ul>
+    {% endblock %}

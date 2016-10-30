@@ -1,0 +1,37 @@
+{% extends "base.html" %} {% load wagtailcore_tags wagtailimages_tags static wagtailuserbar %} {% block body_class %}template-blogpage{% endblock %} {% block image %} {% if page.main_image %} {% image page.main_image original as my_image %}
+<header class="intro-header" style="background-image:url({{ my_image.url }})">
+    {%else%}
+    <header class="intro-header" style="background-image: url(&#39;{% static 'img/intro.jpg' %}&#39;)">
+        {% endif %} {% endblock %} {% block content %}
+
+        <body>
+            <h1>{{ page.title }}</h1> {{ page.body|richtext }} {% endblock %} {% block pager %}
+            <ul class="pager">
+                <li class="Home"><a href="/blog">Home</a></li>
+            </ul>
+            {% endblock %} {% block disqus %}
+            <div id="disqus_thread">
+                <script>
+                /**
+                 *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                 *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+                /*
+                var disqus_config = function () {
+                this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+                this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                };
+                */
+
+                			//change DISQUSNAME to YOURNAME &
+                (function() { // DON'T EDIT BELOW THIS LINE
+                    var d = document,
+                        s = d.createElement('script');
+                    s.src = '//DISQUSNAME.disqus.com/embed.js'; //change DISQUSNAME
+                    s.setAttribute('data-timestamp', +new Date());
+                    (d.head || d.body).appendChild(s);
+                })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                <script id="dsq-count-scr" src="//DISQUSNAME.disqus.com/count.js"  async></script>
+            </div>
+            {% endblock %}

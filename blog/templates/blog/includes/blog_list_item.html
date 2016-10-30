@@ -1,0 +1,38 @@
+{% load static wagtailcore_tags wagtailimages_tags %}
+
+<style type="text/css">
+.data {
+  color: #808080;
+  font-size: 16px;
+  font-style: italic;
+  margin-top: 0;
+}
+
+.image_tmb {	
+	position: relative;
+	margin: 15px 0;
+}
+
+.title {
+	font-weight: bold;
+	font-size: 28px;
+
+}
+</style>
+
+<p class="data">{{ blog.date }}</p>
+<a href="{% pageurl blog %}"><span class = "title">{{ blog.title }}</span></a>
+{% if blog.main_image %}
+    {% image blog.main_image fill-730x250 as img %} 
+        <a href="{% pageurl blog %}"><img class="image_tmb" src="{{ img.url }}" /></a>
+
+{% endif %}
+        
+        
+        <p>{{ blog.intro }}</p>
+
+
+
+
+
+

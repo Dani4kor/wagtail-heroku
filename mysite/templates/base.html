@@ -1,0 +1,137 @@
+{% load static wagtailuserbar %}
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>{% block title %}{% if self.seo_title %}{{ self.seo_title }}{% else %}{{ self.title }}{% endif %}{% endblock %}{% block title_suffix %}{% endblock %}</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" /> {# Global stylesheets #} {% block extra_css %} {# Override this in templates to add extra stylesheets #}
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/clean-blog.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+    </style>
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="{% static 'css/syntax.css' %}">
+    <!-- Custom Fonts -->
+    <link rel="stylesheet" href="{% static 'font/font-awesome.css' %}">
+    <link rel="stylesheet" href="{% static 'font/css.css' %}">
+    <link rel="stylesheet" href="{% static 'font/css(1).css' %}"> {% endblock %}
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="">BLOGNAME</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/blog">Home</a>
+                    </li>
+                    <li>
+                        <a href="https://en.lichess.org/@/OwnOwn">Chess</a>
+                    </li>
+                    <li>
+                    </li>
+                    <li>
+                    </li>
+                    <li>
+                    </li>
+                    <li>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+    {% load wagtailcore_tags wagtailimages_tags %}
+    <!-- Page Header -->
+    {% block image %} {% endblock %}
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="site-heading">
+                    <h1>BLOGNAME</h1>
+                    <h3>About BLOG &amp NAME</h3>
+                    <hr class="intro-divider">
+                    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                        <ul class="list-inline text-center">
+                            <li>
+                                <a href="https://twitter.com/">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-twitter" style="font-size:56px;color:white"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/dani4kor">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-github" style="font-size:56px;color:white"></i>
+                                    </span>
+                                </a>
+                            </li>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </header>
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-preview">
+                    {% wagtailuserbar %} {% block content %} {% endblock %}
+                    <!-- Pager -->
+                    <!-- Pager -->
+                    {% wagtailuserbar %} {% block pager %} {% endblock %} {% block disqus %} {% endblock %}
+                </div>
+            </div>
+        </div>
+        <hr>
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2 col-md-11 col-md-offset-1">
+                        <p class="copyright text-muted">Copyright © BLOGNAME 2016</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        {% block extra_js %} {# Override this in templates to add extra javascript #}
+        <!-- jQuery -->
+        <script src="{% static 'js/jquery.js' %}"></script>
+        <!-- Bootstrap Core JavaScript -->
+        <script src="{% static 'js/bootstrap.js' %}"></script>
+        <!-- Custom Theme JavaScript -->
+        <script src="{% static 'js/clean-blog.js' %}"></script>
+        {% endblock %}
+</body>
+
+</html>

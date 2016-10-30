@@ -1,0 +1,52 @@
+{
+  "name": "WagtailMyTemplate",
+  "description": "Heroku Wagtail deploy",
+  "keywords": [
+    "cms",
+    "Django",
+    "Wagtail",
+    "TemplateBlog"
+  ],
+  "website": "https://github.com/dani4kor",
+  "repository": "https://github.com/dani4kor/wagtail-heroku",
+  "logo": "https://wagtail.io/static/img/wagtail.svg",
+  "success_url": "/",
+  "scripts": {
+    "postdeploy": "python manage.py migrate;"
+  },
+  "env": {
+    "DJANGO_SETTINGS_MODULE": {
+      "description": "This points Heroku to prod",
+      "value": "mysite.settings.production"
+    },
+    "SECRET_KEY": {
+      "description": "Django secret key",
+      "generator": "secret"
+    },
+    "AWS_BUCKET": {
+      "description": "AWS S3 bucket name",
+      "value": "replace_with_bucket_name"
+    },
+    "AWS_ACCESS_KEY_ID": {
+      "description": "AWS S3 key id",
+      "value": "replace_with_key_id"
+    },
+    "AWS_SECRET_ACCESS_KEY": {
+      "description": "AWS S3 access key",
+      "value": "replace_with_key"
+    },
+    "DISABLE_COLLECTSTATIC": {
+      "description": "the hooks should take care of this",
+      "value": "1"
+    }
+  },
+  "image": "heroku/python",
+  "addons": [
+    "heroku-postgresql:hobby-dev"
+  ],
+  "buildpacks": [
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-python"
+    }
+  ]
+}
