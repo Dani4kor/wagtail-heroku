@@ -14,7 +14,7 @@ $ cd your-heroku-app-name
 $ git remote add origin https://github.com/Dani4kor/wagtail-heroku
 $ git pull origin master
 ```
-Now you have the code for the deployed application and you can make changes to it locally and deploy it back to Heroku.
+Now you have the code for the deployed application, you can make changes to it locally and deploy it back to Heroku.
 
 ```
 $ git add .
@@ -33,19 +33,19 @@ Example
 
 - Create Blogindexpage -> complete the fields
 - Add Childpage Blog page for Blogpageindex -> complete the fields
-- Goto https://your-heroku-app-name.herokuapp.com/title-blog-page-index
+- Go to https://your-heroku-app-name.herokuapp.com/title-blog-page-index
 - Configure redirects/sites in Settings
-- Open bottle of Beer, cheers 
+- Open a bottle of Beer, cheers 
 [example](https://it4humans.herokuapp.com)
 
 
 Notice
 ----------
 
-For productions builds need to provide Django SECRET KEY and another security or static compresson.
-Some information you can find on 
+For productions builds you will need to provide Django SECRET_KEY and another security or static compression.
+You can find more information on
 * [heroku-django-cookbook](https://github.com/nigma/heroku-django-cookbook)
-* [watail heroku deploy](https://wagtail.io/blog/deploying-wagtail-heroku)
+* [wagtail heroku deploy](https://wagtail.io/blog/deploying-wagtail-heroku)
 
 Some links
 ----------
