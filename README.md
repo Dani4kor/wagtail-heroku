@@ -5,6 +5,10 @@ Cooked Heroku deploy
 
 [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/dani4kor/wagtail-heroku)
 
+Cooked Zeet.co deploy
+
+[![Deploy](https://deploy.zeet.co/wagtail-heroku.svg)](https://deploy.zeet.co/?url=https://github.com/dani4kor/wagtail-heroku)
+
 ## USAGE
 Deploy this guy, then git clone locally:
 
